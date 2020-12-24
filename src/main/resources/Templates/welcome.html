@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>IMCDP</title>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
@@ -15,7 +15,7 @@
         padding: 10px;
         border: 0.5rem;
         outline: none;
-        font-size: 1rem;
+        font-size: medium;
         resize: none;
         line-height: 1.5rem;
 
@@ -23,46 +23,63 @@
 <script>
     // Side navigation
     function w3_open() {
-        var x = document.getElementById("mySidebar");
+        var x = document.getElementById("Menü");
         x.style.width = "20%";
         x.style.fontSize = "20px";
         x.style.paddingTop = "10%";
         x.style.display = "block";
     }
     function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("Menü").style.display = "none";
     }
 
 </script>
-<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
-    <h1 class="w3-xxxMedium w3-text-theme">Side Navigation</h1>
-    <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="Menü">
+    <h1 class="w3-xxxMedium w3-text-theme">Menü</h1>
+    <button class="w3-bar-item w3-button" onclick="w3_close()">Schließen <i class="fa fa-remove"></i></button>
 </nav>
 
 <head>
-    <div class="w3-container w3-theme w3-padding">
+    <div class="w3-container w3-theme w3-padding-48">
         <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
-        <h2 class="w3-center">Welcome </h2>
+        <h2 class="w3-center">Willkommen auf der Ikum Monitoring and Cyber Defense Platform</h2>
     </div>
 </head>
 
 
 <body >
-<script type="text/javascript">
-    function myFunction() {
-        var x = document.getElementById("textinput").value;
-        document.getElementById("textoutput").innerHTML = x;
-    }
-    document.getElementById("mybutton").onclick = function() {
-        document.myform2.mytextfield2.value = "Test";
-    }
-</script>
+    <div class="w3-container w3-padding" style=" font-size: medium">
+        <p>
+            Die Ikum Monitoring and Cyber Defense Platform, kurz IMCDP, gibt Euch die Möglichkeit Euern
+            Traffic auf Sicherheitsprobleme untersuchen zu lassen.
+        </p>
+    </div>
 
-<script type="text/javascript">
-    document.getElementById("mybutton").onclick = function() {
-        document.myform.mytextfield3.value = "Test";
-    }
-</script>
+    <div class="w3-container w3-padding" style="background-color: rgb(201, 76, 76); font-size: medium">
+        <h3>Und so funktionierts:</h3>
+    </div>
+
+    <div class="w3-container w3-padding" style="font-size: medium">
+        <p style="font-size: medium;">
+            [TODO] Hier folgen ein paar einleitende Sätze und dann Stichpunkte
+        </p>
+        <p style="font-size: medium; margin-left: 50px">
+            - Verbindung über das Ikum-VPN einrichten
+        </p>
+        <p style="font-size: medium; margin-left: 50px">
+            - Loggt Euch hier für den Sicherheitsscan ein: [TODO] Hier kommt ein Link hin
+        </p>
+    </div>
+
+    <div class="w3-container w3-padding" style="background-color: rgb(201, 76, 76); font-size: medium">
+        <h3>Unsere Benutzungsstatistik:</h3>
+    </div>
+
+    <div class="w3-container w3-padding" style="font-size: medium">
+        <p style="font-size: medium;">
+            Heute haben bereits [TODO] 10 Benutzer ihren Traffic bei uns auf Sicherheitsprobleme hin scannen lassen.
+        </p>
+    </div>
 
 </body>
 </html>
