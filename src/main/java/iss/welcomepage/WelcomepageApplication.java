@@ -20,4 +20,15 @@ public class WelcomepageApplication {
         return "Welcome";
     }
 
+    @RequestMapping(value = "/wissenswertes", method = RequestMethod.GET)
+    public String wissenswertes()
+    {
+        return "Wissenswertes";
+    }
+
+    @RequestMapping(value = "/sicherheitsscan", method = RequestMethod.GET)
+    public String sicherheitsscan()
+    {
+        return "Sicherheitsscan";
+    }
 }
