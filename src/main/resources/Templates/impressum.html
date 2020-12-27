@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<title>IMCDP</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"/>
+
+<style>
+
+    textarea {
+        width: 88%;
+        height: 200px;
+        padding: 10px;
+        border: 0.5rem;
+        outline: none;
+        font-size: medium;
+        resize: none;
+        line-height: 1.5rem;
+
+    }</style>
+<script>
+    // Menüleiste
+    function w3_open() {
+        var x = document.getElementById("Menü");
+        x.style.width = "20%";
+        x.style.fontSize = "20px";
+        x.style.paddingTop = "10%";
+        x.style.display = "block";
+    }
+    function w3_close() {
+        document.getElementById("Menü").style.display = "none";
+    }
+
+</script>
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="Menü">
+    <h1 class="w3-xxxMedium w3-text-theme">Menü</h1>
+    <a href="#" class="w3-bar-item w3-button" onclick="location.href='./welcome';">Home</a>
+    <a href="#" class="w3-bar-item w3-button" onclick="location.href='./wissenswertes';">Wissenswertes</a>
+    <a href="#" class="w3-bar-item w3-button" method="get" onclick="location.href='./sicherheitsscan';" >Sicherheitsscan</a>
+    <button class="w3-bar-item w3-button" onclick="w3_close()">Schließen <i class="fa fa-remove"></i></button>
+
+</nav>
+
+<head>
+    <div class="w3-container w3-theme w3-padding-48">
+        <div class="w3-bar">
+            <a href="#" class="w3-bar-item w3-button w3-display-topright w3-blue w3-padding-small w3-left w3-left-align w3-border w3-border-white"
+               style="width:12%" onclick="location.href='./welcome';">Registrierung</a>
+            <a href="#" class="w3-bar-item w3-button w3-display-topright w3-blue w3-padding-small w3-right w3-left-align w3-border w3-border-white"
+               style="width:5%" onclick="location.href='./welcome';">LogIn</a>
+        </div>
+        <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
+        <h2 class="w3-center">Willkommen auf der Ikum Monitoring and Cyber Defense Platform</h2>
+    </div>
+</head>
+
+
+<body>
+<div class="w3-container w3-padding">
+    [TODO] Hier folgt ein Impressumstext
+</div>
+</body>
+</html>

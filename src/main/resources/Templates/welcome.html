@@ -21,7 +21,7 @@
 
     }</style>
 <script>
-    // Side navigation
+    // Menüleiste
     function w3_open() {
         var x = document.getElementById("Menü");
         x.style.width = "20%";
@@ -34,20 +34,92 @@
     }
 
 </script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Monat', 'GB Traffic'],
+            ['Vorvormonat',  0],
+            ['Vormonat',  10],
+            ['Dieser',  50],
+
+        ]);
+
+        var options = {
+            title: 'Gescannter Traffic der vergangenen Monate',
+            curveType: 'function',
+            legend: { position: 'bottom' },
+            width:800,
+            height:500,
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+    }
+</script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ["Jahr", "GB", { role: "style" } ],
+            ["2019", 0, "#b87333"],
+            ["2020", 10, "silver"],
+            ["2021", 100, "gold"],
+            ["2022", 0, "color: #e5e4e2"]
+        ]);
+
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+            { calc: "stringify",
+                sourceColumn: 1,
+                type: "string",
+                role: "annotation" },
+            2]);
+
+        var options = {
+            title: "Gescannter Traffic der vergangenen Jahre",
+            width: 800,
+            height: 500,
+            bar: {groupWidth: "95%"},
+            legend: { position: "none" },
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+        chart.draw(view, options);
+    }
+</script>
+
 <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="Menü">
     <h1 class="w3-xxxMedium w3-text-theme">Menü</h1>
+    <a href="#" class="w3-bar-item w3-button" onclick="location.href='./welcome';">Home</a>
+    <a href="#" class="w3-bar-item w3-button" onclick="location.href='./wissenswertes';">Wissenswertes</a>
+    <a href="#" class="w3-bar-item w3-button" method="get" onclick="location.href='./sicherheitsscan';" >Sicherheitsscan</a>
     <button class="w3-bar-item w3-button" onclick="w3_close()">Schließen <i class="fa fa-remove"></i></button>
+
 </nav>
 
 <head>
     <div class="w3-container w3-theme w3-padding-48">
+        <div class="w3-bar">
+            <a href="#" class="w3-bar-item w3-button w3-display-topright w3-blue w3-padding-small w3-left w3-left-align w3-border w3-border-white"
+               style="width:12%" onclick="location.href='./welcome';">Registrierung</a>
+            <a href="#" class="w3-bar-item w3-button w3-display-topright w3-blue w3-padding-small w3-right w3-left-align w3-border w3-border-white"
+               style="width:5%" onclick="location.href='./welcome';">LogIn</a>
+        </div>
         <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
         <h2 class="w3-center">Willkommen auf der Ikum Monitoring and Cyber Defense Platform</h2>
     </div>
 </head>
 
 
-<body >
+<body>
     <div class="w3-container w3-padding w3-cell" style="width: 50%; font-size: medium">
         <p>
             Die Ikum Monitoring and Cyber Defense Platform, kurz IMCDP, gibt Euch die Möglichkeit Euern
@@ -87,5 +159,33 @@
         </p>
     </div>
 
+    <table class="columns">
+        <tr>
+            <td><div id="curve_chart" style="border: 1px solid #ccc"></div></td>
+            <td><div id="columnchart_values" style="border: 1px solid #ccc"></div></td>
+        </tr>
+    </table>
+
+    <div class="w3-container w3-padding" style="font-size: medium">
+        [TODO] Die hart vercodeten Werte der Tabellen durch dynamisch geholte Werte aus der Datenbank ersetzen
+    </div>
+
 </body>
+
+<style>
+    .footer {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+</style>
+
+<div class="footer">
+    <p>
+        <a href="#" class="w3-bar-item w3-button" onclick="location.href='./impressum';">Impressum</a>
+    </p>
+</div>
 </html>

@@ -3,7 +3,6 @@ package iss.welcomepage;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -30,5 +29,11 @@ public class WelcomepageApplication {
     public String sicherheitsscan()
     {
         return "Sicherheitsscan";
+    }
+
+    @RequestMapping(value = "/impressum", method = RequestMethod.GET)
+    public String impressum()
+    {
+        return "Impressum";
     }
 }
