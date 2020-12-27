@@ -36,4 +36,16 @@ public class WelcomepageApplication {
     {
         return "Impressum";
     }
+
+    @RequestMapping(value = "/registrierung", method = RequestMethod.GET)
+    public String registrierung()
+    {
+        return "Registrierung";
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login()
+    {
+        return "Login";
+    }
 }
